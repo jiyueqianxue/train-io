@@ -37,8 +37,8 @@ public class NBTimeServer {
     private static final int DEFAULT_TIME_PORT = 8900;
 
     // Constructor with no arguments creates a time server on default port.
-    public NBTimeServer() throws Exception{
-        acceptConnections(this.DEFAULT_TIME_PORT);
+	public NBTimeServer() throws Exception{
+        acceptConnections(NBTimeServer.DEFAULT_TIME_PORT);
     }
 
     // Constructor with port argument creates a time server on specified port.
@@ -65,7 +65,8 @@ public class NBTimeServer {
         // step tells the selector that the socket wants to be put on the
         // ready list when accept operations occur, so allowing multiplexed
         // non-blocking I/O to take place.
-        SelectionKey acceptKey = ssc.register(acceptSelector, SelectionKey.OP_ACCEPT);
+        @SuppressWarnings("unused")
+		SelectionKey acceptKey = ssc.register(acceptSelector, SelectionKey.OP_ACCEPT);
 
         int keysAdded = 0;
 
