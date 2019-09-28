@@ -29,7 +29,8 @@ public class TalkClient {
      * @param port
      * @throws IOException
      */
-    public static void buildClient(String hostName, int port, String self, String friend) throws IOException {
+    @SuppressWarnings("resource")
+	public static void buildClient(String hostName, int port, String self, String friend) throws IOException {
 
         SocketChannel socketChannel = SocketChannel.open(new InetSocketAddress(hostName, port));
 

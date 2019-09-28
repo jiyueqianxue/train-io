@@ -11,7 +11,12 @@ import java.io.Serializable;
  */
 public class RequestEntity implements Serializable {
 
-    private int isFirstRequest = 0;//是否是第一次请求 0不是  1是
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	private int isFirstRequest = 0;//是否是第一次请求 0不是  1是
 
     private String target;
 
