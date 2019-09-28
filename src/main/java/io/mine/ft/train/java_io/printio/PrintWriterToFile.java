@@ -7,7 +7,7 @@ import java.io.PrintWriter;
 public class PrintWriterToFile {
 
 	public static void main(String[] args) {
-        String path = "D:\\Program Files (x86)\\ADT\\workspace\\JavaIO\\demoTest.txt";
+        String path = "C:\\Users\\Lenovo\\Desktop\\demoTest.txt";
          
         //创建文件对象
         File file = new File(path);
