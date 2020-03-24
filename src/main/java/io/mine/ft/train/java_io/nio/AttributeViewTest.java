@@ -11,15 +11,15 @@ import java.util.Date;
 public class AttributeViewTest {
 
 	public static void main(String[] args) {
-		Path testPath = Paths.get(".\\src\\com\\yin\\nio\\AttributeViewTest.java");
+		Path testPath = Paths.get(".\\src\\main\\java\\io\\mine\\ft\\train\\java_io\\nio\\AttributeViewTest.java");
 		BasicFileAttributeView basicView = Files.getFileAttributeView(testPath,
 				BasicFileAttributeView.class);
 		try {
 			BasicFileAttributes basicFileAttributes = basicView.readAttributes();
-			PrintStr("创建时间："+new Date(basicFileAttributes.creationTime().toMillis()).toLocaleString());
-			PrintStr("最后访问时间："+new Date(basicFileAttributes.lastAccessTime().toMillis()).toLocaleString());
-			PrintStr("最后修改时间："+new Date(basicFileAttributes.lastModifiedTime().toMillis()).toLocaleString());
-			PrintStr("文件大小："+basicFileAttributes.size());
+			PrintStr("创建时间：" + new Date(basicFileAttributes.creationTime().toMillis()).toLocaleString());
+			PrintStr("最后访问时间：" + new Date(basicFileAttributes.lastAccessTime().toMillis()).toLocaleString());
+			PrintStr("最后修改时间：" + new Date(basicFileAttributes.lastModifiedTime().toMillis()).toLocaleString());
+			PrintStr("文件大小：" + basicFileAttributes.size());
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

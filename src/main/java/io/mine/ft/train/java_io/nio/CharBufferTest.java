@@ -16,6 +16,7 @@ public class CharBufferTest {
 		printlnStr("capacity="+charBuffer.capacity());
 		printlnStr("limit="+charBuffer.limit());
 		printlnStr("postion="+charBuffer.position());
+	
 		/*
 		 * 调用flip方法之前获取数据，获取不到。
 		 * 原因在于get方法，默认返回的是当前position所在位置的数据。
