@@ -7,23 +7,22 @@ import java.nio.channels.FileChannel;
 
 public class ReadAndShow
 {
-  static public void main( String args[] ) throws Exception {
-    FileInputStream fin = new FileInputStream( "readandshow.txt" );
-    FileChannel fc = fin.getChannel();
+	static public void main( String args[] ) throws Exception {
+		FileInputStream fin = new FileInputStream("C:\\Users\\machao\\Desktop\\2.txt");
+		FileChannel fc = fin.getChannel();
 
-    ByteBuffer buffer = ByteBuffer.allocate( 1024 );
+		ByteBuffer buffer = ByteBuffer.allocate(1024);
 
-    fc.read( buffer );
+		fc.read(buffer);
 
-    buffer.flip();
+		buffer.flip();
 
-    int i=0;
-    while (buffer.remaining()>0) {
-      byte b = buffer.get();
-      System.out.println( "Character "+i+": "+((char)b) );
-      i++;
-    }
-
-    fin.close();
-  }
+		int i = 0;
+		while (buffer.remaining() > 0) {
+			byte b = buffer.get();
+			System.out.println("Character " + i + ": " + ((char)b));
+			i++;
+		}
+		fin.close();
+	}
 }
