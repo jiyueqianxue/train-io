@@ -15,6 +15,7 @@ public class ReadAndShow
 
 		fc.read(buffer);
 
+		//读写切换，从buffer中读取数据
 		buffer.flip();
 
 		int i = 0;

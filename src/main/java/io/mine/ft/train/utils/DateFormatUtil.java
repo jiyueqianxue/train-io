@@ -5,7 +5,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 
 /**
  * 日期处理工具类
@@ -74,7 +74,7 @@ public class DateFormatUtil {
 	/**
 	 * 默认日期格式字符串 yyyy-MM-dd转化为Timestamp
 	 * 
-	 * @param date
+	 * @param dateStr
 	 * @return
 	 */
 	public static Timestamp defaultDateStrToTimestamp(String dateStr) {
@@ -95,7 +95,7 @@ public class DateFormatUtil {
 	/**
 	 * 默认日期格式字符串 yyyy-MM-dd转化为java.util.Date
 	 * 
-	 * @param date
+	 * @param dateStr
 	 * @return
 	 */
 	public static Date defaultDateStrToJavaDate(String dateStr) {
@@ -144,7 +144,7 @@ public class DateFormatUtil {
 	/**
 	 * 指定日期时间字符转化为时间戳
 	 * 
-	 * @param dateStr
+	 * @param datetimeStr
 	 * @param formatStr
 	 * @return
 	 */
